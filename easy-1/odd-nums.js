@@ -9,6 +9,7 @@ while (num < 100) {
   num += 2;
 }
 
+//Alternative solution:
 for (let i = 1; i < 100; i += 2) {
   console.log(i);
 }
@@ -16,4 +17,12 @@ for (let i = 1; i < 100; i += 2) {
 // LS solution:
 for (let number = 1; number < 100; number += 2) {
   console.log(number);
+}
+
+//Further exploration
+let readlineSync = require("readline-sync");
+let upperLimit = parseInt(readlineSync.question("Enter upper limit:"));
+
+for (let i = 1; i < upperLimit; i += 2) {
+  console.log(i);
 }
