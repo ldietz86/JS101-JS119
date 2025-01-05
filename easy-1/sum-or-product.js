@@ -72,3 +72,22 @@ if (!isNan(integer) && integer > 0) {
 } else {
   console.log("Invalid entry. Please enter an integer greater than 0.");
 }
+
+//Further exploration
+
+let numsArr = [1, 2, 3, 4, 5, 6];
+
+function getSum(numsArr) {
+  return numsArr.reduce((sumArr, num) => {
+    return sumArr + num;
+  }, 0);
+}
+
+function getProduct(numsArr) {
+  return numsArr.reduce((productArr, num) => {
+    return productArr * num;
+  }, 1);
+}
+
+console.log(getSum(numsArr)); //21
+console.log(getProduct(numsArr)); //720
