@@ -5,8 +5,8 @@
  */
 let readlineSync = require("readline-sync");
 
-let billAmount = parseFloat(readlineSync.prompt("What is the bill?"));
-let tipPercentage = parseInt(realineSync.prompt("What is the tip percentage?"));
+let billAmount = parseFloat(readlineSync.question("What is the bill?"));
+let tipPercentage = parseInt(realineSync.question("What is the tip percentage?"));
 
 let tip = billAmount * (tipPercentage / 100);
 
