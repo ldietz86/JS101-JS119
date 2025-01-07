@@ -30,7 +30,6 @@ if (userChoice === "s") {
 }
 
 //Encapsulate logic into functions
-
 let readlineSync = require("readline-sync");
 
 let integer = parseInt(
@@ -74,7 +73,6 @@ if (!isNan(integer) && integer > 0) {
 }
 
 //Further exploration
-
 let numsArr = [1, 2, 3, 4, 5, 6];
 
 function getSum(numsArr) {

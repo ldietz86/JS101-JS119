@@ -47,7 +47,6 @@ isLeapYear(240000); // true
 isLeapYear(240001); // false
 
 //Further exploration
-
 function isLeapYear(year) {
   if (year % 100 === 0) {
     return false;
@@ -69,7 +68,6 @@ function isLeapYear(year) {
 }
 
 //LS solution
-
 function isLeapYear(year) {
   if (year % 400 === 0) {
     return true;
