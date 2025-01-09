@@ -15,8 +15,6 @@
  * First argument is truthy --> check if second argument is falsy --> if it is, return true, if not, return false.
  * First argument is falsy --> check if second argument is truthy --> if it is, return true. Else, return false.
  *
- *
- *
  */
 
 function xor(arg1, arg2) {
@@ -38,3 +36,13 @@ function xor(arg1, arg2) {
 function xor(value1, value2) {
   return Boolean((value1 && !value2) || (value2 && !value1));
 }
+
+/**
+ * Note about ^ operator:
+ * The ^ operator is a bit-wise operator for performing exclusive-or bit operations. In some cases, you can use ^ as an exclusive-or operator. 
+ * However, it only works properly when both values are numeric or both are boolean -- anything else may lead to unexpected results. 
+ * For instance, you might expect the following expression to return a truthy value. Instead, it returns a falsy value (0).
+ */
+
+"a" ^ false;
+
