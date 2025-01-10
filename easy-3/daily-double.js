@@ -29,3 +29,47 @@ function crunch(str) {
   }
   return uniqueChars;
 }
+
+//Alternative solution
+function crunch(text) {
+  return [...text].reduce((result, char) => {
+    if (result[result.length - 1] !== char) {
+      result += char;
+    }
+    return result;
+  }, "");
+}
+
+/**
+ * Further exploration
+ * In order for the if condition to evaluate to true on the last iteration, text[index + 1] must return undefined.
+ * If we stop at index < text.length - 1, the last character will not be processed.
+ *
+ * Regex:
+ * / start and end of regex
+ * (.) dot is used to match any single character
+ * () capturing group - captures the character matched by .
+ * \1+ looks for one or more occurrences of the same character
+ * "$1" first capture group - placeholder used in the replace method
+ * /g global flag - find all matches within the given string
+ */
+
+function crunch(text) {
+  return text.replace(/(.)\1+/g, "$1");
+}
+
+//LS solution
+function crunch(text) {
+  let index = 0;
+  let crunchText = "";
+
+  while (index <= text.length - 1) {
+    if (text[index] !== text[index + 1]) {
+      crunchText += text[index];
+    }
+
+    index += 1;
+  }
+
+  return crunchText;
+}
