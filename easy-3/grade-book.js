@@ -26,3 +26,6 @@ function getGrade(score1, score2, score3) {
     return "F";
   }
 }
+
+getGrade(95, 90, 93);    // "A"
+getGrade(50, 50, 95);    // "D"

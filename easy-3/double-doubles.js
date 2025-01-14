@@ -18,7 +18,7 @@ function twice(num) {
   }
 }
 
-//Using string manipulation:
+//Using string manipulation
 function twice(num) {
   let numToStr = String(num);
 
