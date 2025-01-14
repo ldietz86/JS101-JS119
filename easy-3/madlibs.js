@@ -11,7 +11,8 @@ let adjective = readlineSync.prompt("Enter an adjective: ");
 let adverb = readlineSync.prompt("Enter an adverb: ");
 
 console.log(`
-Will you ${verb} your ${adjective} ${noun} ${adverb}? That's unfortunate.
-The ${adjective} ${noun} ${verb}s ${adverb} around the snoozing turtle.
-The ${noun} ${adverb} ${verb}s down the mountain. 
+Did you ${verb} at your ${adjective} ${noun} ${adverb}? That's unfortunate.
+The ${adjective} ${noun} ${verb}s ${adverb} around the lazy frog. What time
+will the ${noun} be ready? They should get ready to ${verb} ${adverb} down 
+the mountain. 
 `);
