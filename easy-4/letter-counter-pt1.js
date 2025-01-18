@@ -52,3 +52,33 @@ wordSizes("Four score and seven."); // { "3": 1, "4": 1, "5": 1, "6": 1 }
 wordSizes("Hey diddle diddle, the cat and the fiddle!"); // { "3": 5, "6": 1, "7": 2 }
 wordSizes("What's up doc?"); // { "2": 1, "4": 1, "6": 1 }
 wordSizes(""); // {}
+
+//Alternative solution
+function wordSizes(string) {
+  let wordCount = {};
+  if (string === "") return wordCount;
+  string.split(" ").forEach((word) => {
+    wordCount[word.length] = wordCount[word.length] + 1 || 1;
+  });
+  return wordCount;
+}
+
+//LS solution
+function wordSizes(words) {
+  let wordsArray = words.split(" ");
+  let count = {};
+
+  for (let idx = 0; idx < wordsArray.length; idx += 1) {
+    let wordSize = wordsArray[idx].length;
+    if (wordSize === 0) {
+      continue;
+    }
+
+    if (!count[wordSize]) {
+      count[wordSize] = 0;
+    }
+    count[wordSize] += 1;
+  }
+
+  return count;
+}
