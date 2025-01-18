@@ -10,9 +10,12 @@
  * arr[2] = arr[1] + arr[2]
  *
  * Algorithm:
- * Use the reduce method to create an array that will store modified values
- *
- *
+ * Declare an empty array to store running totals
+ * Use the reduce method to iterate over the array and update running total
+ * Initialize accumulator to 0 
+ * Push the updated accumulator to the new array
+ * Update the accumulator
+ * Return the new array with running totals
  */
 
 function runningTotal(arr) {
@@ -21,6 +24,19 @@ function runningTotal(arr) {
     newArr.push(acc + currentVal);
     return acc + currentVal;
   }, 0);
+  return newArr;
+}
+
+//Using for loop
+function runningTotal(arr) {
+  let newArr = [];
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+    newArr.push(sum);
+  }
+
   return newArr;
 }
 
