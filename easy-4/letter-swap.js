@@ -7,12 +7,15 @@
 function swap(str) {
   let result = [];
   let words = str.split(" ");
+
   for (let i = 0; i < words.length; i++) {
     if (words[i].length > 2) {
       let firstChar = words[i].slice(0, 1);
       let lastChar = words[i].slice(-1);
+
       let newWord =
         lastChar + words[i].slice(1, words[i].length - 1) + firstChar;
+
       result.push(newWord);
     } else {
       result.push(words[i].split("").reverse().join(""));
