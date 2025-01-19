@@ -59,14 +59,6 @@ function isLeapYear(year) {
 
 // This function will fail for years evenly divisible by 100, 400 and 4.
 
-//Alternative solution
-function isLeapYear(year) {
-  if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
-    return true;
-  }
-  return false;
-}
-
 //LS solution
 function isLeapYear(year) {
   if (year % 400 === 0) {
