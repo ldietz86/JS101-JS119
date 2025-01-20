@@ -5,7 +5,6 @@
 
 function wordSizes(str) {
   let modifiedStr = str.replace(/[^a-z0-9\s]/gi, "");
-  console.log(modifiedStr);
   let wordCount = {};
   if (modifiedStr === "") {
     return wordCount;

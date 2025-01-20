@@ -53,7 +53,21 @@ wordSizes("Hey diddle diddle, the cat and the fiddle!"); // { "3": 5, "6": 1, "7
 wordSizes("What's up doc?"); // { "2": 1, "4": 1, "6": 1 }
 wordSizes(""); // {}
 
-//Alternative solution
+// Use reduce() to create a frequency map
+function wordSizes(str) {
+  let wordsArr = str.split(" ");
+  return wordsArr.reduce((lengthFreq, word) => {
+    let wordLength = word.length;
+    if (lengthFreq[wordLength] == null) {
+      lengthFreq[wordLength] = 1;
+    } else {
+      lengthFreq[wordLength] += 1;
+    }
+    return lengthFreq;
+  }, {});
+}
+
+//Use forEach()
 function wordSizes(string) {
   let wordCount = {};
   if (string === "") return wordCount;
