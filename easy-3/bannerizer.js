@@ -2,11 +2,14 @@
 
 function logInBox(str) {
   let boxLines = [];
-  boxLines.push(`+${"-".repeat(str.length + 2)}+`);
-  boxLines.push(`|${" ".repeat(str.length + 2)}|`);
+  let border = `+${"-".repeat(str.length + 2)}+`;
+  let emptyLine = `|${" ".repeat(str.length + 2)}|`;
+
+  boxLines.push(border);
+  boxLines.push(emptyLine);
   boxLines.push(`| ${str} |`);
-  boxLines.push(`|${" ".repeat(str.length + 2)}|`);
-  boxLines.push(`+${"-".repeat(str.length + 2)}+`);
+  boxLines.push(emptyLine);
+  boxLines.push(border);
 
   console.log(boxLines.join("\n"));
 }
