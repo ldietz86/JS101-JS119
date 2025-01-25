@@ -12,6 +12,12 @@ function stringToInteger(str) {
 console.log(stringToInteger("4321") === 4321); // logs true
 console.log(stringToInteger("570") === 570); // logs true
 
+//Alternative solution
+function stringToInteger(str) {
+  return str * 1; //or str / 1, str - 1 + 1, str - 0 (Any Math operation will convert a string to a number bc JS will perform type coercion)
+}
+
+
 //LS solution
 function stringToInteger(string) {
   const DIGITS = {
