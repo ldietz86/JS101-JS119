@@ -34,6 +34,11 @@ function integerToString(num) {
   return result;
 }
 
+integerToString(4321);        // "4321"
+integerToString(0);           // "0"
+integerToString(5000);        // "5000"
+integerToString(1234567890);  // "1234567890"
+
 //Alternative solution
 function integerToString(num) {
   let digits = [];
@@ -43,7 +48,7 @@ function integerToString(num) {
     digits.push(remainder);
     num = Math.floor(num / 10);
   }
-  
+
   return digits.reverse().join("");
 }
 
