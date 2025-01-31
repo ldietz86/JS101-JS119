@@ -13,3 +13,21 @@ function multiplyList(arr1, arr2) {
 }
 
 multiplyList([3, 5, 7], [9, 10, 11]); // [27, 50, 77]
+
+//Alternative solutions
+function multiplyList(arr1, arr2) {
+  return arr1.map((el, i) => el * arr2[i]);
+}
+
+function multiplyList(arr1, arr2) {
+  return arr1.reduce((acc, currentVal, i) => {
+    return acc.concat(currentVal * arr2[i]);
+  }, []);
+}
+
+function multiplyList(arr1, arr2) {
+  return arr1.reduce((newArr, _, i) => {
+    newArr.push(arr1[i] * arr2[i]);
+    return newArr;
+  }, []);
+}
