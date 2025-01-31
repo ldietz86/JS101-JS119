@@ -54,3 +54,23 @@ function union(array1, array2) {
   copyNonDupsTo(newArray, array2);
   return newArray;
 }
+
+
+//REVIEW
+function union(arr1, arr2) {
+  let uniqueArr = [];
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (!uniqueArr.includes(arr1[i])) {
+      uniqueArr.push(arr1[i]);
+    }
+  }
+
+  for (let i = 0; i < arr2.length; i++) {
+    if (!uniqueArr.includes(arr2[i])) {
+      uniqueArr.push(arr2[i]);
+    }
+  }
+
+  return uniqueArr;
+}
