@@ -1,10 +1,13 @@
 /**
  * Write a function that takes an array of integers between 0 and 19 and returns an array of those integers sorted based on the English word for each number.
  *
- * Input: Array of numbers
- * Output: Array of numbers sorted alphabetically based on their English name
+ * Input: Array of numbers between 0 and 19
+ * Output: Array of numbers sorted alphabetically based on their English word equivalents
  *
- *
+ * Create an array with the English word equivalents from 0-19
+ * Map each number to its corresponding word
+ * Sort the words array using the sort() method which sorts strings in lexicographical order
+ * Map each word back to its corresponding index and return the array of numbers
  */
 
 function alphabeticNumberSort(arr) {
@@ -86,3 +89,9 @@ function wordSort(num1, num2) {
 function alphabeticNumberSort(array) {
   return [...array].sort(wordSort);
 }
+
+/**
+ * A negative value indicates that a should come before b.
+ * A positive value indicates that a should come after b.
+ * Zero or NaN indicates that a and b are considered equal.
+ */
