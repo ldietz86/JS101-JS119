@@ -14,7 +14,7 @@
  * Declare a counter to keep track of open vs closed parentheses
  * Loop over the string and check if the current element is an opening parentheses. If it is, increment the counter by 1. 
  * If not, check if the current element is a closing parentheses. If it is, decrement the counter by 1.
- * Use another if condition to check if the closing parentheses exceed the opening parentheses at any point.
+ * Use another if condition to check if the closing parentheses exceed the opening parentheses at any point. If they do, return false.
  * Finally, return true if counter is equal to 0 -> parentheses are balanced
  */
 
