@@ -22,7 +22,28 @@ function substrings(str) {
   return substrings.flat();
 }
 
-//Alternative solution 
+substrings("abcde");
+
+// returns
+[
+  "a",
+  "ab",
+  "abc",
+  "abcd",
+  "abcde",
+  "b",
+  "bc",
+  "bcd",
+  "bcde",
+  "c",
+  "cd",
+  "cde",
+  "d",
+  "de",
+  "e",
+];
+
+//Alternative solution
 function substrings(str) {
   let newArr = [];
   for (let i = 0; i < str.length; i++) {
