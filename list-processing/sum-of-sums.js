@@ -5,10 +5,15 @@
  * Input: array
  * Output: string
  *
- * Declare a variable to keep track of running total
- * Use the reduce method to add the current value to the total
- * Set the initial value to 0
+ * Declare a variable to keep track of the running total
+ * Use the reduce method to add the current value to the total 
+ * Set the initial value of reduce to 0
  * Return the sum of the accumulator and total
+ *
+ * sumOfSums([3, 5, 2])
+ * First iteration: currentVal = 3, total = 3, acc = 3
+ * Second iteration: currentVal = 5, total = 8, acc = 11
+ * Third iteration: currentVal = 2, total = 10, acc = 21
  *
  */
 
