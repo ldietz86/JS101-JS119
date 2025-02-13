@@ -5,10 +5,10 @@
 function staggeredCase(str) {
   let staggeredStr = "";
   for (let i = 0; i < str.length; i++) {
-    if (i % 2 === 1) {
-      staggeredStr += str[i].toLowerCase();
-    } else {
+    if (i % 2 === 0) {
       staggeredStr += str[i].toUpperCase();
+    } else {
+      staggeredStr += str[i].toLowerCase();
     }
   }
   return staggeredStr;
