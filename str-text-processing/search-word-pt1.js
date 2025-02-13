@@ -1,4 +1,3 @@
-//Search word part 1
 /**
  * Write a function that takes two arguments, a word and a string of text, and returns an integer representing the number of times the word appears in the text. You may assume that the word and
  * text inputs will always be provided, and that all word breaks are spaces. Thus, some words will include punctuation such as periods and commas. Also assume that the search is case-insensitive.
