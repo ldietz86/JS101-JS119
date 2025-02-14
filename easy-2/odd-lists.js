@@ -25,16 +25,12 @@ function oddities(arr) {
 }
 
 //Further exploration
-function evenities(arr) {
-  return arr.filter((el) => el % 2 === 0);
-}
+let evenities = (arr) => arr.filter((_, i) => i % 2 === 1);
 
 //Alternative solutions
 let oddities = (arr) => arr.filter((el) => array.indexOf(el) % 2 === 0);
 
-let oddities = (arr) => array.filter((el, i) => i % 2 === 0);
-
-let oddities = (arr) => arr.filter((_, idx) => idx % 2 === 0);
+let oddities = (arr) => arr.filter((_, i) => i % 2 === 0);
 
 console.log(oddities([2, 3, 4, 5, 6])); // logs [2, 4, 6]
 console.log(oddities([1, 2, 3, 4, 5, 6])); // logs [1, 3, 5]

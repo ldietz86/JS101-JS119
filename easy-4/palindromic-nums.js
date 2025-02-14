@@ -15,3 +15,10 @@ isPalindromicNumber(123210);       // false
 isPalindromicNumber(22);           // true
 isPalindromicNumber(5);            // true
 
+//Further exploration: JS implicitly converts numbers with a leading zero to an octal when they are passed in as an argument 
+function convertOctal(str) {
+  let num = parseInt(str, 10);
+  return num;
+}
+
+console.log(convertOctal('0123')); // 123

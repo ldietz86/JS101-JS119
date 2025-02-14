@@ -14,6 +14,14 @@ function logInBox(str) {
   console.log(boxLines.join("\n"));
 }
 
+logInBox("To boldly go where no one has gone before.");
+
++--------------------------------------------+
+|                                            |
+| To boldly go where no one has gone before. |
+|                                            |
++--------------------------------------------+
+
 //LS solution
 function logInBox(str) {
   let strLength = str.length;

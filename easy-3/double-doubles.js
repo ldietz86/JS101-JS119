@@ -20,12 +20,12 @@ function twice(num) {
 
 //Using string manipulation
 function twice(num) {
-  let numToStr = String(num);
+  let strNum = String(num);
 
-  if (numToStr.length % 2 === 0) {
-    let mid = numToStr.length / 2;
-    let leftSide = numToStr.slice(0, mid);
-    let rightSide = numToStr.slice(mid);
+  if (strNum.length % 2 === 0) {
+    let mid = strNum.length / 2;
+    let leftSide = strNum.slice(0, mid);
+    let rightSide = strNum.slice(mid);
 
     if (leftSide === rightSide) {
       return num;
@@ -42,3 +42,21 @@ twice(107); // 214
 twice(103103); // 103103
 twice(3333); // 3333
 twice(7676); // 7676
+
+//LS solution
+function twice(number) {
+  if (isDoubleNumber(number)) {
+    return number;
+  } else {
+    return number * 2;
+  }
+}
+
+function isDoubleNumber(number) {
+  let stringNumber = String(number);
+  let center = Math.floor(stringNumber.length / 2);
+  let leftNumber = stringNumber.substring(0, center);
+  let rightNumber = stringNumber.substring(center);
+
+  return leftNumber === rightNumber;
+}

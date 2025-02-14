@@ -30,6 +30,12 @@ function crunch(str) {
   return uniqueChars;
 }
 
+crunch('ddaaiillyy ddoouubbllee');    // "daily double"
+crunch('4444abcabccba');              // "4abcabcba"
+crunch('ggggggggggggggg');            // "g"
+crunch('a');                          // "a"
+crunch('');                           // ""
+
 //Alternative solution
 function crunch(text) {
   return [...text].reduce((result, char) => {

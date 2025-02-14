@@ -44,16 +44,9 @@ if (arr.includes(lastNum)) {
   );
 }
 
-
-// Futher exploration - LS solution
+// Further exploration
 function isIncluded(arr, val) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > val) {
-      return true;
-    }
-  }
-
-  return false;
+  return arr.some((element) => element > val);
 }
 
 //Array.some() non-destructive method that returns true if it finds an element that passes the test implemented by the provided function, false otherwise.
