@@ -56,7 +56,7 @@ function union(array1, array2) {
 }
 
 
-//REVIEW
+//Solution using two for loops
 function union(arr1, arr2) {
   let uniqueArr = [];
 

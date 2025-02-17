@@ -16,7 +16,7 @@
  */
 
 function reverse(arr) {
-  for (let i = 1; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     let temp = arr.splice(i, 1)[0];
     arr.unshift(temp);
   }
