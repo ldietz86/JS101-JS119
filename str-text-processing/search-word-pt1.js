@@ -20,7 +20,7 @@ const text =
 
 searchWord("sed", text); // 3
 
-//Alternative solution
+//Solution using forEach()
 function searchWord(word, text) {
   let count = 0;
 
@@ -33,6 +33,7 @@ function searchWord(word, text) {
   return count;
 }
 
+//Solution using filter()
 const searchWord = (word, text) => {
   return text.split(" ").filter((el) => el.toLowerCase() === word.toLowerCase())
     .length;
