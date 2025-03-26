@@ -4,7 +4,8 @@
  */
 
 function wordSizes(str) {
-  let modifiedStr = str.replace(/[^a-z]/gi, "");
+  let modifiedStr = str.replace(/[^a-z ]/gi, "");
+  //let modifiedStr = str.replace(/[^a-z\s]/gi, ""); // Preserve spaces using \s or a space after ^a-z
   let wordCount = {};
   if (modifiedStr === "") {
     return wordCount;
