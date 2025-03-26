@@ -52,6 +52,8 @@ function countOccurrences(list) {
   }
 }
 
+countOccurrences(vehicles);
+
 //Further exploration
 function countOccurrences(arr) {
   let obj = arr.reduce((wordFreq, word) => {
