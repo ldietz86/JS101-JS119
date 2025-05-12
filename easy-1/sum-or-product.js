@@ -6,10 +6,11 @@
 let readlineSync = require("readline-sync");
 
 let integer = parseInt(
-  readlineSync.prompt("Please enter an integer greater than 0:")
+  readlineSync.question("Please enter an integer greater than 0: ")
 );
+
 let userChoice = readlineSync
-  .prompt("Enter 's' to compute the sum, or 'p' to compute the product.")
+  .question("Enter 's' to compute the sum, or 'p' to compute the product. ")
   .toLowerCase();
 
 let sum = 0;
@@ -33,12 +34,12 @@ if (userChoice === "s") {
 let readlineSync = require("readline-sync");
 
 let integer = parseInt(
-  readlineSync.prompt("Please enter an integer greater than 0:")
+  readlineSync.question("Please enter an integer greater than 0: ")
 );
 
-if (!isNan(integer) && integer > 0) {
+if (!isNaN(integer) && integer > 0) {
   let userChoice = readlineSync
-    .prompt("Enter 's' to compute the sum, or 'p' to compute the product.")
+    .question("Enter 's' to compute the sum, or 'p' to compute the product. ")
     .toLowerCase();
 
   function getSum(integer) {
