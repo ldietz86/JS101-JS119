@@ -3,21 +3,6 @@
  * and 107 are not. Write a function that returns the number provided as an argument multiplied by two, unless the argument is a double number; otherwise, return the double number as-is.
  */
 
-function twice(num) {
-  let numArr = Array.from(String(num), Number);
-
-  let mid = numArr.length / 2;
-
-  let leftSide = numArr.slice(0, mid);
-  let rightSide = numArr.slice(mid);
-
-  if (leftSide.every((value, index) => value === rightSide[index])) {
-    return num;
-  } else {
-    return num * 2;
-  }
-}
-
 //Using string manipulation
 function twice(num) {
   let strNum = String(num);
@@ -42,6 +27,22 @@ twice(107); // 214
 twice(103103); // 103103
 twice(3333); // 3333
 twice(7676); // 7676
+
+//Alternative solution using every()
+function twice(num) {
+  let numArr = Array.from(String(num), Number);
+
+  let mid = numArr.length / 2;
+
+  let leftSide = numArr.slice(0, mid);
+  let rightSide = numArr.slice(mid);
+
+  if (leftSide.every((value, index) => value === rightSide[index])) {
+    return num;
+  } else {
+    return num * 2;
+  }
+}
 
 //LS solution
 function twice(number) {

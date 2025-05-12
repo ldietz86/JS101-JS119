@@ -35,5 +35,3 @@ function logInBox(str) {
   console.log(emptyLine);
   console.log(border);
 }
-
-logInBox("To boldly go where no one has gone before.");

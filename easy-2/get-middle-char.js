@@ -21,22 +21,11 @@
  */
 
 function centerOf(str) {
-  let chars = str.split("");
-  let middleIndex = Math.floor(chars.length / 2);
-
-  return chars.length % 2 === 1
-    ? chars[middleIndex]
-    : chars[middleIndex - 1] + chars[middleIndex];
-}
-
-
-//Split the string into chars unneccesarily 
-function centerOf(str) {
-  let middleIndex = Math.floor(str.length / 2);
+  let centerIndex = Math.floor(str.length / 2);
 
   return str.length % 2 === 1
-    ? str[middleIndex]
-    : str[middleIndex - 1] + str[middleIndex];
+    ? str[centerIndex]
+    : str[centerIndex - 1] + str[centerIndex];
 }
 
 //LS solution

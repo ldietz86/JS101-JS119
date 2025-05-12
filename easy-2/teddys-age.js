@@ -3,8 +3,9 @@
  */
 
 function getAge(max, min) {
-  let age = Math.floor(Math.random() * (max - min) + min);
-  console.log(`Teddy is ${age} years old!`);
+  return Math.floor(Math.random() * (max - min + 1) + min); //Include + 1 to ensure the max value is included in the possible outcomes
 }
 
-getAge(121, 20);
+let age = getAge(20, 120);
+
+console.log(`Teddy is ${age} years old!`);
