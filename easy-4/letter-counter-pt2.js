@@ -5,17 +5,16 @@
 
 function wordSizes(str) {
   let modifiedStr = str.replace(/[^a-z ]/gi, "");
-  //let modifiedStr = str.replace(/[^a-z\s]/gi, ""); // Preserve spaces using \s or a space after ^a-z
+  //let modifiedStr = str.replace(/[^a-z\s]/gi, ""); // Preserve spaces using \s or by adding a space after ^a-z
   let wordCount = {};
-  if (modifiedStr === "") {
-    return wordCount;
-  }
+  if (modifiedStr === "") return wordCount;
+
   let words = modifiedStr.split(" ");
   for (let i = 0; i < words.length; i++) {
     let length = words[i].length;
 
     if (wordCount[length]) {
-      wordCount[length]++;
+      wordCount[length] += 1;
     } else {
       wordCount[length] = 1;
     }

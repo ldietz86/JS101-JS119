@@ -7,18 +7,22 @@
  */
 
 let readlineSync = require("readline-sync");
-let length = parseFloat(
-  readlineSync.prompt("Enter the length of the room in meters:")
-);
-let width = parseFloat(
-  readlineSync.prompt("Enter the width of the room in meters:")
-);
+
+const SQMETERS_TO_SQFEET = 10.7639;
+
+console.log("Enter the length of the room in meters:");
+let length = parseFloat(readlineSync.prompt());
+
+console.log("Enter the width of the room in meters:");
+let width = parseFloat(readlineSync.prompt());
 
 let areaInMeters = length * width;
-let areaInFeet = 10.7639 * areaInMeters;
+let areaInFeet = SQMETERS_TO_SQFEET * areaInMeters;
 
 console.log(
-  `The area of the room is ${areaInMeters.toFixed()} square meters (${areaInFeet.toFixed()} square feet).`
+  `The area of the room is ${areaInMeters.toFixed(
+    2
+  )} square meters (${areaInFeet.toFixed(2)} square feet).`
 );
 
 /**
@@ -27,6 +31,9 @@ console.log(
  */
 
 let readlineSync = require("readline-sync");
+
+const SQMETERS_TO_SQFEET = 10.7639;
+
 let length = parseFloat(
   readlineSync.prompt("Enter the length of the room in meters:")
 );
@@ -35,7 +42,7 @@ let width = parseFloat(
 );
 
 let areaInMeters = length * width;
-let areaInFeet = 10.7639 * areaInMeters;
+let areaInFeet = SQMETERS_TO_SQFEET * areaInMeters;
 
 let inputType = readlineSync.prompt("Which unit is required (m or ft)?");
 
