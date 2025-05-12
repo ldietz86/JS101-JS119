@@ -18,11 +18,7 @@
  */
 
 function xor(arg1, arg2) {
-  if ((arg1 && !arg2) || (!arg1 && arg2)) {
-    return true;
-  } else {
-    return false;
-  }
+  return (arg1 && !arg2) || (!arg1 && arg2)
 }
 
 //Further exploration - xor function would be useful for traffic lights, short-circuit evaluation would not make sense because both arguments need to be checked to ensure that exactly one is truthy.

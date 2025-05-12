@@ -21,11 +21,13 @@ let readlineSync = require("readline-sync");
 
 let name = readlineSync.question("What is your name?");
 
-function greetUser(name) {
+function getGreeting(name) {
   return name.includes("!")
     ? `Hello ${name} Why are we screaming`.toUpperCase()
     : `Hello ${name}.`;
 }
+
+console.log(getGreeting('Bob'));
 
 //LS solution
 let readlineSync = require("readline-sync");
